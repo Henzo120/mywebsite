@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethiopian Quality Award</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="image/Log.png" alt="Ethiopian Quality Award Logo">
+            </a>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Ethiopian Quality Award organizations</h1>
+            
+        </div>
+        <a href="contact.html" class="cta-button">Contact Us</a>
+    </header>
+    
+    
+    <main>
+
+        <section id="services">
+            <h2>Our Services</h2>
+        
+            <div class="services-container">
+                <div class="service">
+                    <img class="service-image1" src="image/service.jpg" alt="Service 1">
+                    <h3>Service 1</h3>
+                    <p>Description of Service 1.</p>
+                </div>
+        
+                <div class="service">
+                    <img class="service-image2" src="image/services2.jpg" alt="Service 2">
+                    <h3>Service 2</h3>
+                    <p>Description of Service 2.</p>
+                </div>
+        
+                <div class="service">
+                    <img class="service-image3" src="image/services3.jpg" alt="Service 3">
+                    <h3>Service 3</h3>
+                    <p>Description of Service 3.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+    
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are committed to fostering a culture of quality excellence in Ethiopia. Our mission is to recognize and celebrate organizations that demonstrate outstanding commitment to quality and continuous improvement.</p>
+            
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+                <img id="aboutUsImage" src="image/service.jpg" width="100%" height="4%" alt="About Us Image">
+            </div>
+        </section>
+        
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to learn more about our services, please feel free to get in touch with us.</p>
+        <form action="contact.php" method="post">
+           
+            <input type="text" id="name" name="name" required placeholder="Full name">
+
+            
+            <input type="email" id="email" name="email" placeholder="email" required>
+
+          
+            <textarea id="message" name="message" rows="4" placeholder="message"required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Ethiopian Quality Award</p>
+    </footer>
+    <script>
+        // JavaScript for the image slideshow
+        const images = [
+            "image/service.jpg",
+            "image/services2.jpg",
+            "image/services3.jpg"
+        ];
+        const aboutUsImage = document.getElementById("aboutUsImage");
+        let currentIndex = 0;
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            aboutUsImage.src = images[currentIndex];
+        }
+
+        // Change the image every 3 seconds (3000 milliseconds)
+        setInterval(nextImage, 3000);
+    </script>
+</body>
+</html>
